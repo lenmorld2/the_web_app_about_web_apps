@@ -1,0 +1,38 @@
+{
+  "name": "fullstack0",
+  "version": "1.0.0",
+  "description": "``` $ npm init $ npm install express --save $ npm start ```",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-build": "webpack --watch",
+    "watch-server": "nodemon server.js",
+    "start": "npm-run-all --parallel watch-server watch-build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenmorld/react_node_workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lenmorld/react_node_workshop/issues"
+  },
+  "homepage": "https://github.com/lenmorld/react_node_workshop#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}
