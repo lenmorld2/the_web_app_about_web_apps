@@ -8,7 +8,6 @@ const articles = [
    "body": "# hey\n# hi"}
 ]
 
-
 class Articles extends React.Component {
   render() {
     return (

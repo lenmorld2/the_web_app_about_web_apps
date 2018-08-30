@@ -7,7 +7,9 @@ class Article extends React.Component {
     debugger;
     return (
       <div className="card">
-        <Markdown source={this.props.article.body} />
+        <a href="api/article">Article_01</a>
+
+        {/*<Markdown source={this.props.article.body} />*/}
       </div>
     );
   }
