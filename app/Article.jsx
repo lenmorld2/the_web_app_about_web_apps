@@ -33,7 +33,7 @@ class Article extends React.Component {
     const div = document.createElement("div");
     div.innerHTML = html;
     div.querySelectorAll('script').forEach(e => e.parentNode.removeChild(e));
-    div.querySelectorAll('iframe').forEach(e => e.parentNode.removeChild(e));
+    // div.querySelectorAll('iframe').forEach(e => e.parentNode.removeChild(e));
 
     return div.innerHTML;
   }
