@@ -1,6 +1,7 @@
 // server.js
-
 const http = require('http');
+
+const fs = require('fs');
 
 /* get from env. var PORT
    e.g. to set on exec: [terminal]$ PORT=4001 node server.js
@@ -22,7 +23,25 @@ app.get("/", function(request, response) {
 });
 
 app.get("/api/article", function(request, response) {
-  response.sendFile(__dirname + '/articles/article1.md');
+  var md_path = __dirname + '/articles/article1.md';
+  fs.readFile(md_path, 'utf-8', (err, data) => {
+
+    console.log(data);
+    response.writeHead(200, {'Content-type': 'text/html'});
+
+    var showdown  = require('showdown'),
+    converter = new showdown.Converter(),
+    text  = data,
+    html  = converter.makeHtml(text);
+
+    response.end(html);
+
+    // text  = '# hello, markdown!'
+    // response.end('<h1>Hello Router</h1>');
+    // response.sendFile(__dirname + '/articles/article1.md');
+  });
+
+
 });
 
 // listen for requests
