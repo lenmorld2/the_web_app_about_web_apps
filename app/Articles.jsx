@@ -12,7 +12,8 @@ import Article from './Article';
 // updated info on articles
 
 const articles = [
-  {name: "hello_world", id: 1}
+  {name: "hello_world", id: 1},
+  {name: "hello_world", id: 2},
 ]
 
 class Articles extends React.Component {
