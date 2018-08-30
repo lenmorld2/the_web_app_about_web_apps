@@ -3,6 +3,8 @@ const http = require('http');
 
 const fs = require('fs');
 
+const url = require('url');
+
 /* get from env. var PORT
    e.g. to set on exec: [terminal]$ PORT=4001 node server.js
    or default 3001
@@ -23,7 +25,15 @@ app.get("/", function(request, response) {
 });
 
 app.get("/api/article", function(request, response) {
-  var md_path = __dirname + '/articles/article1.md';
+
+  var baseURI = url.parse(request.url, true);
+
+  // /api/article?id=1 -> query: { id: '1' }
+  console.log(baseURI);
+  request.queryParams = baseURI.query;
+  var article_id = request.queryParams.id;
+
+  var md_path = __dirname + `/articles/article${article_id}.md`;
   fs.readFile(md_path, 'utf-8', (err, data) => {
 
     console.log(data);

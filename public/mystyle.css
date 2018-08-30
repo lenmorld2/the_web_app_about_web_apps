@@ -41,6 +41,12 @@ body {
   margin-top: 20px;
 }
 
+.article_card {
+  background-color: #6cc24a;
+  padding: 20px;
+  margin-top: 20px;
+}
+
 /* Clear floats after the columns */
 /* .row:after {
   content: "";

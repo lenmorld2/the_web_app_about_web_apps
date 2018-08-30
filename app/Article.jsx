@@ -16,7 +16,7 @@ class Article extends React.Component {
     // response we get from fetch() is not JSON
     // https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
 
-    fetch("api/article").then(res =>
+    fetch(`api/article?id=${this.props.article.id}`).then(res =>
       res.text()
       // use res.json() if expecting JSON
     ).then(data => {
@@ -41,8 +41,8 @@ class Article extends React.Component {
   render() {
     debugger;
     return (
-      <div className="card">
-        <a href="api/article">full screen</a>
+      <div className="article_card">
+        <a href={`api/article?id=${this.props.article.id}`} target="_blank">full screen</a>
         <div dangerouslySetInnerHTML={{__html: this.createMarkup(this.state.html)}}>
         </div>
 
