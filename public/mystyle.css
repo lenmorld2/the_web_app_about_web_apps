@@ -1,15 +1,16 @@
 body {
   font-family: Arial;
   padding: 20px;
-  background: #f1f1f1;
+  background: #333333;
 }
 
 /* Header/Blog Title */
 .header {
-  padding: 30px;
-  font-size: 40px;
+  padding: 20px;
+  font-size: 30px;
   text-align: center;
-  background: white;
+  background: #215732;
+  color: white;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -29,7 +30,7 @@ body {
 /* Fake image */
 .fakeimg {
   background-color: #aaa;
-  width: 100%;
+  width: 80%;
   padding: 20px;
 }
 
@@ -41,11 +42,11 @@ body {
 }
 
 /* Clear floats after the columns */
-.row:after {
+/* .row:after {
   content: "";
   display: table;
   clear: both;
-}
+} */
 
 /* Footer */
 .footer {

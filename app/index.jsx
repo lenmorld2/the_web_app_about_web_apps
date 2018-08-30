@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Home extends React.Component {
+import Articles from './Articles';
+
+class App extends React.Component {
   render() {
     return (
       <div>
-        Hello World 1!
+        <Articles />
       </div>
     );
   }
 };
 
-ReactDOM.render(<Home />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

@@ -13,11 +13,16 @@ var app = express();
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
+app.use(express.static('articles'));
 
 // http://expressjs.com/en/starter/basic-routing.html
 // at home page, serve index.html
 app.get("/", function(request, response) {
   response.sendFile(__dirname + '/app/index.html');
+});
+
+app.get("/api/article", function(request, response) {
+  response.sendFile(__dirname + '/articles/article1.md');
 });
 
 // listen for requests
