@@ -47,3 +47,7 @@ https://www.udemy.com/all-about-nodejs/learn/v4/t/lecture/454650?start=0
 
 
 ![9fb5162e.png](:storage/3c3f3c9d-54eb-4cb0-b641-c50ec422a635/9fb5162e.png)
+
+
+https://nodejs.org/en/about/
+https://youteam.co.uk/blog/top-companies-that-used-node-js-in-production/
