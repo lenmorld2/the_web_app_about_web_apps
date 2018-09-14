@@ -7,7 +7,7 @@ TL;DR
 When passing functions to methods like `map, filter, reduce` and other functions,
 we lose the context of `this` object. We use arrow functions to keep the `this` inside the nested function.  
 
-```
+```javascript
   getFavorites() {
      return this.favorites.map((item) => {
         return this.name + " says " + item; 
@@ -21,7 +21,7 @@ In terms of an object (i.e. a class instance), arrow functions allows us to get 
 
 ##### Sample code
 
-```
+```javascript
 class Dog {
   constructor(name, age) {
      this.name = name;
@@ -54,7 +54,7 @@ class Dog {
 Let's take a closer look at `getFavorites()` function.
 This function takes each item in `favorites` array, prefixing it with `this.name`, and returning the phrases array. `map()` is the perfect method for this, since we are doing a 1-1 mapping, item -> phrase.
 
-```
+```javascript
   getFavorites() {
      return this.favorites.map(function(item) {
         return this.name + " says " + item; 
@@ -75,7 +75,7 @@ But instead we get this
 #### Why is this happening?
 
 
-```
+```javascript
 getFavorites() { 
   return this.favorites.map( function )
 }
@@ -96,7 +96,7 @@ we don't have the context of `this` inside the function.
 
 #### Classic solution 1
 
-```
+```javascript
   getFavorites() {
      var that = this;
      return this.favorites.map(function(item) {
@@ -113,7 +113,7 @@ This works, but with an extra variable.
 
 Using `function.bind(this)`
 
-```
+```javascript
   getFavorites() {
       return this.favorites.map(function(item) {
         return this.name + " says " + item; 
@@ -127,7 +127,7 @@ If you'll have 3 nested functions, then you'll have 3 binds.
 
 ### ES6 Arrow Function solution
 
-```
+```javascript
   getFavorites() {
      return this.favorites.map((item) => {
         return this.name + " says " + item; 
