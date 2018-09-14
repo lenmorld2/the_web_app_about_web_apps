@@ -2,6 +2,8 @@
 
 
 TL;DR
+
+
 When passing functions to methods like `map, filter, reduce` and other functions,
 we lose the context of `this` object. We use arrow functions to keep the `this` inside the nested function.  
 
