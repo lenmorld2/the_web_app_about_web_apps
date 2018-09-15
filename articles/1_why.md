@@ -4,8 +4,25 @@ JS - #1 most used PL (stack overflow 2016)
 
 Accessible by anyone, only need browser and internet(but not prerequisite)
 
+# history on server-rendered pages and client-rendred pages
+
+- before, eveything is server-rendered, every resource is a page refresh
+ that is network-expensive
+- nowadays, web dev puts lots of processing into
+the client 
+chaeper on network, more demanding on computing power
+- trend is like that since computers just got smaller
+and more powerful (from the past to today)
+makes sense to leverage this
+- before you need a super powerful server, probably hundreds of them to handle lots of clients
+- nowadays, you can get away with less, 
+since users' computers do the work
+(e.g. Walmart 1 Node server on Black Friday)
 
 # Why we need UI frameworks?
+
+ - State-management
+ - 
 
 https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445
 
