@@ -1,3 +1,6 @@
+## 2 ways to set up a webpack (React, ES6, babel) frontend and a Node backend
+
+
 1. One server that acts both as web server and data server
 
   - A Node server serves the files bundled by Webpack (frontend), and also handles all API requests from the frontend.
