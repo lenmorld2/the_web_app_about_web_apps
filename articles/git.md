@@ -6,4 +6,6 @@ To checkout files from another branch into current branch
 `git checkout other_branch -- .`
 
 Discard all changes to all .scss files in current branch
+
+
 `git checkout -- \*.scss`
