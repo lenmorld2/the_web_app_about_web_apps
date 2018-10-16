@@ -19,6 +19,7 @@ To lose all uncommitted changes in working dir
 `git reset --hard`
 
 To lose all commits after abc123, putting HEAD back to abc123
+
 `git reset --hard abc123`
 
 [ref] https://www.theserverside.com/video/How-to-use-the-git-reset-hard-command-to-change-a-commit-history 
