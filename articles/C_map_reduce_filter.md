@@ -2,9 +2,26 @@
 
 #### map()
 
+```javascript
 
+[1,2,3].map(function(item) {
+	return item+1; 
+});
 
+// [2,3,4]
 
+arr = [
+    {"name": "Lenny", "id": 1},
+    {"name": "Manny", "id": 2},
+    {"name": "Timmy", "id": 3},
+]
+
+Object.keys(arr).map(function(item) {
+    return `${arr[item]["name"]} ${arr[item]["id"]} ` 
+});
+
+// ["Lenny 1 ", "Manny 2 ", "Timmy 3 "]
+```
 
 #### filter()
 
