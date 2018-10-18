@@ -36,7 +36,7 @@ console.log(`After deleting 'ghi', array: ${JSON.stringify(arr, null, 2)}`);
 #### reduce()
 
 
-```
+```javascript
 
 console.log("Demo of JS reduce()");
 const arr = [{id: 1, age: 27, name: "Lenny"}, {id: 2, age: 30, name: "Jimmy"}, {id: 3, age: 45, name: "Manny"}];
