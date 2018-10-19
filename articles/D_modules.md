@@ -3,19 +3,19 @@ Modules are very important in readability and separation-of-concerns. The term "
 
 Before ES6, JS didn't support modules natively. Standards like AMD, RequireJS, and CommonJS were among the ways to get around it.
 
-```
+```javscript
 var React = require('react');
 ```
 
 ES6 modules use `import` and `export`.
 
-```
+```javscript
 import React from 'react';
 ```
 
 In React, each component, is usually in its own module, and is made available to other components via `export`;
 
-```
+```javscript
 class Coffee extends React.Component {
   ...
 }
@@ -24,7 +24,7 @@ export default Coffee;
 ```
 
 Any other React component can then `import` the module and use it
-```
+```javascript
 // React component
 
 import Coffee from 'coffee';
