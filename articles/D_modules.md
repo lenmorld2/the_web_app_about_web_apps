@@ -1,6 +1,9 @@
 Modules are very important in readability and separation-of-concerns. The term "modularity" is one of the non-functional requirements of a good software.
 
 
+generally, it is better to use **named imports** especially for tooling
+TODO: elaborate this
+
 Before ES6, JS didn't support modules natively. Standards like AMD, RequireJS, and CommonJS were among the ways to get around it.
 
 ```javscript
@@ -39,6 +42,7 @@ class Breakfast extends React.Component {
   }
 }
 ```
+
 
 However, ES6 modules and all other ES6 features are not completely supported by browsers yet. Thus, we need to transpile ES6 code into ES5 using a transpiler, like Babel.
 To ease development, Babel is usually included in JS bundlers, like Webpack. 
