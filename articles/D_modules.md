@@ -1,8 +1,12 @@
 Modules are very important in readability and separation-of-concerns. The term "modularity" is one of the non-functional requirements of a good software.
 
 
-generally, it is better to use **named imports** especially for tooling
+generally, it is better to use **named expo** especially for tooling
+
+vs **default exports**
+
 TODO: elaborate this
+also using aliases eg. import lenny as len
 
 Before ES6, JS didn't support modules natively. Standards like AMD, RequireJS, and CommonJS were among the ways to get around it.
 
