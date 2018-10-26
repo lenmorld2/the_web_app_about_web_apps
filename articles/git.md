@@ -29,3 +29,10 @@ To lose all commits after abc123, putting HEAD back to abc123
 git config --global alias.gac '!git add . && git commit -m'
 
 $ git gac "commit message"
+
+
+#### Markdown
+
+- Images
+
+`![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)`
