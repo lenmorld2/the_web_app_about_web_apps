@@ -23,3 +23,10 @@ https://codepen.io/lenmorld/post/arrow-functions-and-this
 ### why use arrow functions?
 
 - this
+
+
+### template literals
+```
+const foo = "hello"
+`${foo} world`
+```
