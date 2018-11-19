@@ -10,12 +10,21 @@ since you don't have access to `this.state`
 
 a. Binding
 
-`<input onChange={this.handleChange.bind(this)}>` 
+```javascript
+render() {
+    ...
+    <input onChange={this.handleChange.bind(this)}>
+    ...
+``` 
 
 b. Arrow functions
 
-`<input onChange={() => this.setState()}`
 
+```javascript
+render() {
+    ...
+   <input onChange={() => this.handleChange()}
+    ...
 
 GOOD
 > terse and clear, especially the arrow function solution
@@ -36,9 +45,46 @@ References:
 
 2. Binding in constructor
 
+```javascript
+constructor(props) {
+  super(props);
+  this.handleChange = this.handleChange.bind(this);
+}
+
+render() {... }
+```
+
+GOOD:
+> bound in constructor so no performance overhead
+
+BAD:
+> readability and maintenance: as you have more functions, you'll have
+> a lot of binding in constructor and you might forget one
+> repetition of code
 
 
+3. Class property arrow function
 
+```javascript
+handleChange = () => {
+  // call this function from render 
+  // and this.whatever in here works fine.
+};
+
+render() {... }
+```
+
+GOOD:
+> readability and maintenance ✔️
+> performance ✔️
+BAD:
+> need non-standard (yet) stage-3 features
+> Must enable `transform-class-properties` or
+> `stage3` in Babel
+
+Remember that this works since arrow functions keep the 
+**this** binding of the enclosing scope, which in the case of ES6 classes, 
+is the component instance `this`
 
 ...
 
@@ -49,3 +95,8 @@ And any of the alternatives has effects in terms of readability, localization of
 non-standard but upcoming JS features, etc.
 
 Pick your poison, but choose the mose suitable one.
+
+
+References:
+
+https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56
