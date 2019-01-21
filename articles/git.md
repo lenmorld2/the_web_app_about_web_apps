@@ -1,3 +1,9 @@
+#### reverting a pushed commit
+
+`git reset --hard <last-good-commit>`
+`git push --force`
+
+
 #### discarding changes
 
 To checkout files from another branch into current branch
